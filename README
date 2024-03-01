@@ -1,0 +1,20 @@
+Lenguage:Spanish
+
+Proyecto de Extracción de Texto de Imágenes en regiones especificas con Visión Artificial
+Este proyecto fue desarrollado en colaboración con el Parque de Innovación Tecnológica durante mis estudios de licenciatura en Física. El propósito principal de este proyecto es la extracción de texto de imágenes, centrándose únicamente en regiones específicas. La razón detrás de esta limitación es que al aplicar OCR (Reconocimiento Óptico de Caracteres) en toda la imagen, donde la mayoría del contenido carece de texto, puede resultar ineficiente y propenso a errores.
+
+Para abordar este desafío, se diseñó inicialmente un modelo de visión por computadora que detecta la región donde se encuentra el texto. De esta manera, solo se aplica OCR a la región detectada, la cual está definida por coordenadas YOLO. Esto mejora la eficiencia y la precisión del proceso de extracción de texto.
+
+Contenido del Repositorio:
+extractor.py: Este script es responsable de recorrer cada imagen en una carpeta específica y aplicar los procesos necesarios para extraer texto de cada una de ellas.
+
+proceso/: Esta carpeta contiene los diferentes procesos necesarios para extraer texto de las imágenes.
+
+ejemplares_etiquetados/: Aquí es donde se deben colocar las imágenes junto con sus respectivas coordenadas en un archivo de texto que indica la ubicación de la region en el formato YOLO. El nombre de la imagen y el archivo de texto deben ser iguales.
+
+texto_extraido/: Después de que el script extractor.py procesa las imágenes, los textos extraídos se guardan en esta carpeta.
+
+el_promedio_de_distancia.txt: Se crea un archivo de texto que contiene el promedio de la distancia por la cual cada palabra fue sustituida en comparación con la que se detectó originalmente. Este archivo sirve como un indicador de la precisión de la extracción de OCR.
+
+Próximos Pasos
+El desarrollo del modelo de visión artificial para la detección de texto será compartido en este mismo repositorio de GitHub en un futuro próximo. Este modelo es fundamental para optimizar el proceso de extracción de texto de imágenes, ya que permite focalizar el esfuerzo de OCR únicamente en las áreas relevantes, mejorando así la eficiencia y la precisión del sistema.
